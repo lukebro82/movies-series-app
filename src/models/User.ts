@@ -19,7 +19,7 @@ User.init(
       },
     },
     name: { type: DataTypes.STRING, allowNull: false },
-    avatar_url: { type: DataTypes.STRING, allowNull: false },
+    avatar_url: { type: DataTypes.STRING, allowNull: true },
   },
   {
     sequelize,
