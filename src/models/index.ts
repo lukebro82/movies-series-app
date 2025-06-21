@@ -1,13 +1,13 @@
-import { Auth } from "./Auth";
-import { User } from "./User";
-import { MovieSerie } from "./MovieSerie";
+import { Auth, AuthCreationAttributes } from "./Auth";
+import { User, UserCreationAttributes } from "./User";
+import { MovieSerie, MovieseriesCreateAttributes } from "./MovieSerie";
 import { MovieSerieGenre } from "./MovieSerieGenre";
 import { Actor } from "./Actor";
 import { MovieActor } from "./MovieActors";
 import { MovieDirector } from "./MovieDirectors";
 import { UserFavs } from "./UserFavs";
 import { Genre } from "./Genre";
-import { Director } from "./Director";
+import { Director, directorCreationAttributes } from "./Director";
 
 // Auth hasOne User
 Auth.hasOne(User, { foreignKey: "auth_id" });
@@ -52,8 +52,11 @@ Director.belongsToMany(MovieSerie, {
 
 export {
   Auth,
+  AuthCreationAttributes,
   User,
+  UserCreationAttributes,
   MovieSerie,
+  MovieseriesCreateAttributes,
   MovieSerieGenre,
   Actor,
   MovieActor,
@@ -61,4 +64,5 @@ export {
   UserFavs,
   Genre,
   Director,
+  directorCreationAttributes,
 };

@@ -37,3 +37,12 @@ MovieSerie.init(
   },
   { sequelize, modelName: "MovieSerie" }
 );
+
+export interface MovieseriesCreateAttributes {
+  type: "movie" | "serie";
+  title: string;
+  duration: number;
+  description: string;
+  release_date: Date;
+  poster_url: string;
+}

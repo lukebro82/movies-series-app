@@ -14,7 +14,7 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "Auth",
+        model: "Auths",
         key: "id",
       },
     },
@@ -23,6 +23,12 @@ User.init(
   },
   {
     sequelize,
-    modelName: "User",
+    modelName: "Users",
   }
 );
+
+export interface UserCreationAttributes {
+  auth_id: any;
+  name: string;
+  avatar_url: string;
+}

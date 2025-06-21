@@ -16,16 +16,23 @@ Director.init(
     },
     birth_date: {
       type: DataTypes.DATE,
-      allowNull: true,
+      allowNull: false,
     },
     bio: {
       type: DataTypes.TEXT,
-      allowNull: true,
+      allowNull: false,
     },
     photo_url: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
   },
   { sequelize, modelName: "Director" }
 );
+
+export interface directorCreationAttributes {
+  name: string;
+  birth_date: Date;
+  bio: string;
+  photo_url: string;
+}
